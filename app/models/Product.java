@@ -20,8 +20,8 @@ public class Product extends Model {
     @Constraints.Required
     private String name;
 
-    @Constraints.Required
-    private String category;
+    @ManyToOne
+    private Category category;
 
     @Constraints.Required
     private String description;
@@ -93,11 +93,11 @@ public class Product extends Model {
         this.price = price;
     }
 
-    public String getCategory() {
+    public Category getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Category category) {
         this.category = category;
     }
 }
