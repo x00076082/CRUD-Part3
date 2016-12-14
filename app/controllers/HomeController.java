@@ -95,7 +95,7 @@ public class HomeController extends Controller {
         flash("success", "Product " + newProduct.getName() + " has been created");
 
         // Redirect to the admin home
-        return redirect(controllers.routes.HomeController.products());
+        return redirect(controllers.routes.HomeController.products(0));
     }
 
     // Delete Product by id
@@ -107,7 +107,7 @@ public class HomeController extends Controller {
         flash("success", "Product has been deleted");
 
         // Redirect to products page
-        return redirect(routes.HomeController.products());
+        return redirect(routes.HomeController.products(0));
     }
 
     //Update a product by ID

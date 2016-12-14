@@ -11,7 +11,9 @@
               <!-- Start of for loop - For each c in categories add a list item -->
               <!-- Also show the number of products in each category -->
               @for(c <- categories){
-                  <a href="@routes.HomeController.products(c.getId)" class="list-group-item">@c.getName</a>
+                  <a href="@routes.HomeController.products(c.getId)" class="list-group-item">@c.getName
+                    <span class="badge">@c.getProducts.size()</span>
+                  </a>
               }
           </ul>
         </div>
